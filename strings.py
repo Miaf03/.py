@@ -67,7 +67,12 @@ print(f"Year: {year}")
 
 # Escribe un programa que pregunte por consola por los productos de una cesta, separados por comas, y muestre por pantalla cada uno de los productos en una línea distinta.
 
-products = input("Enter the products in the basket separated by commas: ")
-basket = products.split(',')
+raw_input = input("Enter the products in the basket separated by commas: ")
 
-print("\n".join(basket))
+split_items = raw_input.split(",")
+cleaned_items = [item.strip() for item in split_items]
+
+print("\n".join(cleaned_items))
+
+'''strip() elimina espacios al inicio y al final de un string'''
+'''https://thedataschools.com/python/strings/strip-metodo-string/'''
